@@ -2,11 +2,17 @@ class ShoesController < ApplicationController
     
     def index
         shoes = Shoe.all
+
+        render json: shoes
     end
+
+    def show
+        shoes = Shoe.find_by_id(params[:id])
+        render json: shoes
 
 
     def create 
-        games = Shoe.new(params[shoe_params])
+        shoes = Shoe.new(params[shoe_params])
         if shoes.save
             render json: shoes
         else
