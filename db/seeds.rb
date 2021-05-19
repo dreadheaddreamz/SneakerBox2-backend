@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#shoes = Shoe.create([{name: 'Jordan 3 UNC'}, {description: 'Fire and the colorway is a classic'}, {image: 'https://houseofheat.co/app/uploads/2020/02/where-to-buy-air-jordan-3-unc-ct8532-104-8-1200x750.jpg'}])

@@ -9,6 +9,7 @@ class ShoesController < ApplicationController
     def show
         shoes = Shoe.find_by_id(params[:id])
         render json: shoes
+    end
 
 
     def create 
@@ -17,6 +18,7 @@ class ShoesController < ApplicationController
             render json: shoes
         else
             render json: {error: "We can't do that", status:400}
+        end
     end
 
     def destroy
