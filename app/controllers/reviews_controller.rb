@@ -12,9 +12,9 @@ class ReviewsController < ApplicationController
     def create
         reviews = Review.new(content: params[:content], shoe_id: params[:shoe_id])
         if !reviews.save
-            render json: {error: "We can't do that", status:400}
-        else
             render json: reviews
+        else
+            render json: {errors: "We can't do that", status:400}
         end
     end
 
