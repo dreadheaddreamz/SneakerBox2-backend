@@ -3,7 +3,7 @@ class ShoesController < ApplicationController
     def index
         shoes = Shoe.all
 
-        render json: shoes include [:brand]
+        render json: shoes, include: [:brand]
     end
 
     def show
