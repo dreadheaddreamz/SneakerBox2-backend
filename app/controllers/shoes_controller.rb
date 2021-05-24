@@ -3,7 +3,7 @@ class ShoesController < ApplicationController
     def index
         shoes = Shoe.all
 
-        render json: shoes
+        render json: shoes include [:brand]
     end
 
     def show
@@ -16,6 +16,9 @@ class ShoesController < ApplicationController
         shoes = Shoe.new(params[shoe_params])
         if shoes.save
             render json: shoes
+            
+        elsif 
+            shoes.build_brand
         else
             render json: {error: "We can't do that", status:400}
         end
